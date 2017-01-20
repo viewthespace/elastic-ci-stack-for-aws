@@ -415,6 +415,8 @@ Resources:
 
   AgentAutoScaleGroup:
     Type: AWS::AutoScaling::AutoScalingGroup
+    DependsOn:
+      - MountTarget
     Properties:
       VPCZoneIdentifier: !If [
         "CreateVpcResources",

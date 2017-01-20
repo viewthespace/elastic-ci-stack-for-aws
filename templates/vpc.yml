@@ -6,6 +6,8 @@ Resources:
     Properties:
       CidrBlock: 10.0.0.0/16
       InstanceTenancy: default
+      EnableDnsSupport: true
+      EnableDnsHostnames: true
       Tags:
         - Key: Name
           Value: $(AWS::StackName)
