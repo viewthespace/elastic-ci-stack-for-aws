@@ -25,3 +25,11 @@ Resources:
       SubnetId: $(Subnet0)
       SecurityGroups:
       - Ref: MountTargetSecurityGroup
+  MountTarget1:
+    Type: AWS::EFS::MountTarget
+    Properties:
+      FileSystemId:
+        Ref: FileSystem
+      SubnetId: $(Subnet1)
+      SecurityGroups:
+      - Ref: MountTargetSecurityGroup
