@@ -368,6 +368,7 @@ Resources:
         #!/bin/bash -xv
         sudo mkdir -p /efs
         mount -t nfs4 -o nfsvers=4.1 $(FileSystem).efs.$(AWS::Region).amazonaws.com:/ /efs
+        service docker restart
         BUILDKITE_STACK_NAME="$(AWS::StackName)" \
         BUILDKITE_STACK_VERSION=dev \
         BUILDKITE_SECRETS_BUCKET="$(SecretsBucket)" \
